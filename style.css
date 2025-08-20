@@ -16,6 +16,13 @@ header.scrolled .logo-topo { height:40px; }
 .sobre { padding:60px 20px; text-align:center; background:#f9f9f9; }
 .sobre .logo-sobre { margin-top:20px; height:80px; }
 
+.denuncias { padding:60px 20px; text-align:center; background:#fff; }
+.denuncias form { margin-top:20px; display:flex; flex-direction:column; align-items:center; }
+.denuncias input, .denuncias select, .denuncias textarea { width:300px; margin:5px 0; padding:8px; }
+.denuncias button { padding:10px 20px; background:#00796b; color:#fff; border:none; cursor:pointer; margin-top:10px; }
+.denuncias button:hover { background:#004d40; }
+#map { width:100%; height:400px; margin-top:10px; }
+
 .motivacionais { padding:60px 20px; text-align:center; background:#fff; }
 .motiv-title { color:#00796b; margin-bottom:5px; }
 .green-line { width:60px; height:4px; background:#00796b; margin:0 auto 30px auto; border-radius:2px; }
