@@ -7,21 +7,18 @@ header .logo-topo { height:60px; transition: all 0.3s ease; }
 header.scrolled .logo-topo { height:40px; }
 .navbar a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; }
 
-.hero { text-align:center; padding:120px 20px 60px; background:linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%); }
-.hero h1, .hero p { opacity:0; transform:translateY(50px); transition:all 0.6s ease; }
-.hero h1.show, .hero p.show { opacity:1; transform:translateY(0); }
+.hero { display:flex; justify-content:center; align-items:center; height:400px; background:#ccc; margin-top:80px; }
+.hero-box { text-align:center; padding:50px; background:#b0b0b0; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2); opacity:0; transform:translateY(50px); transition:all 0.6s ease; }
+.hero-box.show { opacity:1; transform:translateY(0); }
+.hero-box h1 { font-size:2em; color:#fff; margin-bottom:10px; }
+.hero-box p { font-size:1.2em; color:#fff; }
 
 .sobre { padding:60px 20px; text-align:center; background:#f9f9f9; }
 .sobre .logo-sobre { margin-top:20px; height:80px; }
 
-.denuncias { padding:60px 20px; text-align:center; background:#fff; }
-.denuncias form { margin-top:20px; display:flex; flex-direction:column; align-items:center; }
-.denuncias input, .denuncias select, .denuncias textarea { width:300px; margin:5px 0; padding:8px; }
-.denuncias button { padding:10px 20px; background:#00796b; color:#fff; border:none; cursor:pointer; margin-top:10px; }
-.denuncias button:hover { background:#004d40; }
-
-#map { width:100%; height:400px; margin-top:10px; }
-
-.motivacionais { display:flex; justify-content:space-around; margin:50px 0; }
-.card-fade { background:#fff; padding:20px; width:30%; text-align:center; border-radius:5px; opacity:0; transform:translateY(50px); transition:all 0.6s ease; }
+.motivacionais { padding:60px 20px; text-align:center; background:#fff; }
+.motiv-title { color:#00796b; margin-bottom:5px; }
+.green-line { width:60px; height:4px; background:#00796b; margin:0 auto 30px auto; border-radius:2px; }
+.cards-container { display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; }
+.card-fade { background:#fff; padding:30px; width:30%; min-width:250px; text-align:center; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); opacity:0; transform:translateY(50px); transition:all 0.6s ease; }
 .card-fade.show { opacity:1; transform:translateY(0); }
