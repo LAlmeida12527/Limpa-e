@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #00796b;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo-topo {
+  width: 150px;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: #004d40;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #ff5722;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero button:hover {
+  background-color: #e64a19;
+}
+
+.destaque {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.destaque .card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.destaque .card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.destaque .card p {
+  font-size: 1.1em;
+}
+
+footer {
+  background-color: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.denuncias {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.denuncias h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.denuncias label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.denuncias input,
+.denuncias select,
+.denuncias textarea,
+.denuncias button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.denuncias button {
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+}
+
+.denuncias button:hover {
+  background-color: #e64a19;
+}
+
+.fade-in {
+  opacity: 0;
