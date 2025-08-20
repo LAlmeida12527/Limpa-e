@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpaê - Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Limpaê" class="logo-topo">
+    <nav>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="denuncias.html">Denúncias</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="fade-in">Faça a diferença em Lauro de Freitas</h1>
+        <p class="fade-in">Denuncie locais com lixo irregular e ajude a cidade a se tornar mais limpa e sustentável.</p>
+        <button class="fade-in" onclick="document.getElementById('destaque').scrollIntoView({behavior: 'smooth'})">Denunciar Agora</button>
+      </div>
+    </section>
+
+    <section class="destaque" id="destaque">
+      <div class="card">
+        <h3>Lixo Domiciliar</h3>
+        <p>Separe e denuncie descarte irregular.</p>
+      </div>
+      <div class="card">
+        <h3>Entulho</h3>
+        <p>Ajude a identificar e registrar acúmulo em áreas públicas.</p>
+      </div>
+      <div class="card">
+        <h3>Hospitalar</h3>
+        <p>Denuncie descarte inadequado de resíduos perigosos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if(window.scrollY > 50){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const fadeEls = document.querySelectorAll('.fade-in');
+      fadeEls.forEach((el, i) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }, i * 300);
+      });
+    });
+  </script>
+</body>
+</html>

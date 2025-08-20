@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpaê - Denúncias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Denuncie Aqui</h1>
+      <form id="denunciaForm" action="https://formspree.io/f/manbzgkd" method="POST" enctype="multipart/form-data">
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Gênero:</label>
+        <select name="genero" required>
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label>Faixa Etária:</label>
+        <select name="idade" required>
+          <option value="">Selecione</option>
+          <option value="menor18">Menor de 18</option>
+          <option value="18-30">18 a 30</option>
+          <option value="31-50">31 a 50</option>
+          <option value="51+">Mais de 50</option>
+        </select>
+
+        <label>Tipo de Lixo:</label>
+        <select name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="domiciliar">Domiciliar</option>
+          <option value="entulho">Entulho</option>
+          <option value="hospitalar">Hospitalar</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <label>Descrição:</label>
+        <textarea name="descricao" rows="4" required></textarea>
+
+        <label>Imagem (opcional):</label>
+        <input type="file" name="imagem" accept="image/*" id="imagemInput">
+        <img id="preview" alt="Preview da imagem"/>
+
+        <button type="submit">Enviar Denúncia</button>
+      </form>
+    </section>
+
+    <div class="logo-baixo">
+      <img src="logo.png" alt="Logo Limpaê">
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    const inputImagem = document.getElementById('imagemInput');
+    const preview = document.getElementById('preview');
+    inputImagem.addEventListener('change', function() {
+      const file = this.files[0];
+      if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+
+    const form = document.getElementById('denunciaForm');
+    form.addEventListener('submit', function(e){
+      let valid = true;
+      this.querySelectorAll('input, select, textarea').forEach(el => {
+        if(!el.checkValidity()){
+          el.style.borderColor = 'red';
+          valid = false;
+        } else {
+          el.style.borderColor = '#ccc';
+        }
+      });
+      if(!valid) e.preventDefault();
+    });
+
+    // Logo animação scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if(window.scrollY > 50){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
